@@ -1,0 +1,43 @@
+Name: Sowjanya Vanapalli
+Task: Print 5 employee names,ID's, salary and experience.
+___________________________________________________________________
+
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+struct employee
+{
+    char name[20];
+    char id[20];
+    int exp;
+    int salary;
+};
+int main()
+{
+    struct employee emp[5];
+    int i=0;
+    for(i=0;i<5;i++)
+    {
+        printf("\nEmployee %d",i+1);
+        printf("\nEnter name of employee:");
+        scanf("%s",&emp[i].name);
+        printf("\nEnter ID of employee: ");
+        scanf("%s",&emp[i].id);
+        printf("\nEnter experience of the employee: ");
+        scanf("%d",&emp[i].exp);
+        printf("\nEnter salary of the employee: ");
+        scanf("%d",&emp[i].salary);
+    }
+    printf("\nDetails of employees \n");
+    for(i=0;i<5;i++)
+    {
+        printf("\nEmployee %d",i+1);
+        printf("\nName: %s",emp[i].name);
+        printf("\nID: %s",emp[i].id);
+        printf("\nExperience: %d",emp[i].exp);
+        printf("\nSalary: %d",emp[i].salary);
+        printf("\n");
+    }
+    return 0;
+}
